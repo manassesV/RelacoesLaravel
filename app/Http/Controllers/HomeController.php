@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index(\App\Turma $turma)
     {
-        dd($turma->user()->get()->toArray());
+        //dd($turma->user()->get()->toArray());
     }
 }
