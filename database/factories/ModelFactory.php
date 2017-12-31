@@ -22,3 +22,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+$factory->define(App\Turma::class, function (Faker\Generator $faker){
+    return [
+        'nome' => $faker->jobTitle,
+        'status' => true,
+        'data_inicio' => date('Y-m-d'),
+        'data_fim' => date('Y-m-d'),
+        'user_turma' => 1,
+    ]; 
+});

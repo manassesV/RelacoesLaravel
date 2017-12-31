@@ -4,7 +4,6 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Turmas;
 
 class User extends Authenticatable
 {
@@ -28,7 +27,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     
-    public function Turmas(){
-        return $this->hasMany(Turma::class);
+    public function turmas(){
+        return $this->hasMany('App\Turma','user_turma');
     }
+    
+  
 }
