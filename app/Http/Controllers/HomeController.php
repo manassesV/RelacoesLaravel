@@ -21,8 +21,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(\App\Turma $turma)
     {
-        return view('home');
+        dd($turma->user()->get()->toArray());
     }
 }
