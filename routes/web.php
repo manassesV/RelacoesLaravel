@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function (App\User $turmas) {
-   $dados = $turmas->find(auth()->id())->turmas()->where('user_turma',1)->get()->toArray();
+Route::get('/', function (App\Turma $turmas) {
+   $dados = $turmas->get()->toArray();
    
    dd($dados);
     

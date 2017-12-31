@@ -14,7 +14,9 @@ use Illuminate\Database\Seeder;
 class TurmaSeeder extends Seeder{
     
     public function run(){
-        factory(App\Turma::class,10)->create();
+        //factory(App\Turma::class,10)->create();
+        factory(App\Aula::class,10)->create();
+        
     }
     
 }

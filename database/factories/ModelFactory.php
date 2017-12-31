@@ -33,3 +33,12 @@ $factory->define(App\Turma::class, function (Faker\Generator $faker){
         'user_turma' => 1,
     ]; 
 });
+
+
+
+$factory->define(App\Aula::class, function (Faker\Generator $faker){
+    return [
+        'nome' => $faker->lastName,
+        'data' => date('Y-m-d'),
+    ]; 
+});
