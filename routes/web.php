@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function (App\Turma $turmas) {
-   $dados = $turmas->get()->toArray();
+   $dados = $turmas->find(1)->aula()->get()->toArray();
+   
    
    dd($dados);
+   
     
 });
 
