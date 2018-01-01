@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', function (App\Turma $turmas) {
-   $dados = $turmas->find(1)->aula()->get()->toArray();
+Route::get('/', function (App\Aula $turmas) {
+   //$dados = $turmas->find(1)->aula()->get()->toArray();
+   $dados = $turmas->find(1);
+
    
-   
-   dd($dados);
+   dd($dados->turma()->get()->toArray());
    
     
 });

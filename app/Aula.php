@@ -10,6 +10,7 @@ class Aula extends Model {
     protected $fillable = ['nome', 'data'];
     protected $hidden = ['id'];
     protected $visible = ['nome', 'data','status'];
+    protected $guarded = ['id'];
     
     protected $casts = [
                'nome' => 'string',
@@ -23,7 +24,9 @@ class Aula extends Model {
             ];
 
     public function turma() {
-        $this->belongsToMany('App\Turma');
+        return $this->belongsToMany('App\Turma')
+                    ->withPivot('status')
+                    ->wherePivot('status',true);
     }
     
     
